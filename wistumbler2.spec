@@ -11,6 +11,10 @@ URL:		http://www.nopcode.org/?t=wistumbler2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+Wireless network sniffer.
+
+%description -l pl
+Sniffer sieci bezprzewodowych.
 
 %prep
 %setup -q -n %{name}.%{version}-pre3
@@ -21,7 +25,6 @@ env PREFIX=%{_prefix} USE_GTK=1 \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 install -d $RPM_BUILD_ROOT{%{_sysconfdir},%{_bindir},%{_datadir}}
 
 %{__make} install \
@@ -43,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_mandir}/man?/*
-%config(noreplace) %{_sysconfdir}/%{name}*
+%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}*
