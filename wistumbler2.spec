@@ -46,4 +46,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_datadir}/%{name}
 %{_mandir}/man?/*
-%config(noreplace) %verify(not size mtime md5) %{_sysconfdir}/%{name}*
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/%{name}*
