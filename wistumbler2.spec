@@ -2,10 +2,11 @@ Summary:	Wireless network sniffer
 Summary(pl):	Sniffer sieci bezprzewodowych
 Name:		wistumbler2
 Version:	00
-Release:	0.pre3.1
+%define		_pre	pre3
+Release:	0.%{_pre}.1
 License:	GPL
 Group:		Networking/Utilities
-Source0:	ftp://ftp.nopcode.org/prj/wistumbler2/%{name}.%{version}-pre3.tar.gz
+Source0:	ftp://ftp.nopcode.org/prj/wistumbler2/%{name}.%{version}-%{_pre}.tar.gz
 # Source0-md5:	922da338af586c24d81cdd87b2020c0e
 URL:		http://www.nopcode.org/?t=wistumbler2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -17,7 +18,7 @@ Wireless network sniffer.
 Sniffer sieci bezprzewodowych.
 
 %prep
-%setup -q -n %{name}.%{version}-pre3
+%setup -q -n %{name}.%{version}-%{_pre}
 
 %build
 env PREFIX=%{_prefix} USE_GTK=1 \
