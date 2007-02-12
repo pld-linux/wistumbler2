@@ -1,5 +1,5 @@
 Summary:	Wireless network sniffer
-Summary(pl):	Sniffer sieci bezprzewodowych
+Summary(pl.UTF-8):   Sniffer sieci bezprzewodowych
 Name:		wistumbler2
 Version:	00
 %define		_pre	pre3
@@ -14,7 +14,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Wireless network sniffer.
 
-%description -l pl
+%description -l pl.UTF-8
 Sniffer sieci bezprzewodowych.
 
 %prep
