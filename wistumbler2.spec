@@ -1,5 +1,5 @@
 Summary:	Wireless network sniffer
-Summary(pl.UTF-8):   Sniffer sieci bezprzewodowych
+Summary(pl.UTF-8):	Sniffer sieci bezprzewodowych
 Name:		wistumbler2
 Version:	00
 %define		_pre	pre3
